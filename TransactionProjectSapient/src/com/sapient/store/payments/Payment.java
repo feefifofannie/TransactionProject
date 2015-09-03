@@ -3,15 +3,15 @@ package com.sapient.store.payments;
 import com.sapient.store.orders.Order;
 
 public class Payment {
-	private Object amount;
+	private Double amount;
 	private Order order;
 	
 	
 
-	public Object getAmount() {
+	public Double getAmount() {
 		return amount;
 	}
-	public void setAmount(Object amount) {
+	public void setAmount(Double amount) {
 		this.amount = amount;
 	}
 	public Order getOrder() {

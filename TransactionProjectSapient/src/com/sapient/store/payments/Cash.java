@@ -1,13 +1,13 @@
 package com.sapient.store.payments;
 
 public class Cash implements Authorization {
-	private Object cashTendered;
+	private Double cashTendered;
 
-	public Object getCashTendered() {
+	public Double getCashTendered() {
 		return cashTendered;
 	}
 
-	public void setCashTendered(Object cashTendered) {
+	public void setCashTendered(Double cashTendered) {
 		this.cashTendered = cashTendered;
 	}
 

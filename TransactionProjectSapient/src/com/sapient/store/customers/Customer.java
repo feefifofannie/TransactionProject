@@ -21,7 +21,7 @@ public class Customer {
 		this.name = name;
 	}
 	
-	public Object getAddress() {
+	public String getAddress() {
 		return this.address;
 	}
 	
