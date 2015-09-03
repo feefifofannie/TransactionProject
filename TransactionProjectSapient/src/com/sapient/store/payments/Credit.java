@@ -2,17 +2,17 @@ package com.sapient.store.payments;
 
 import java.util.Date;
 
-public class Credit implements Authorization {
-	private String number;
+public class Credit extends Payment implements Authorization {
+	private Long number;
 	private String type;
 	private Date expDate;
 	
 	
 	
-	public String getNumber() {
+	public Long getNumber() {
 		return number;
 	}
-	public void setNumber(String number) {
+	public void setNumber(Long number) {
 		this.number = number;
 	}
 	public String getType() {
@@ -29,9 +29,16 @@ public class Credit implements Authorization {
 	}
 	
 	@Override
-	public void authorized() {
+	public boolean authorized() {
 		// TODO Auto-generated method stub
-		
+		if ((number>0) && (Math.floor(Math.log10(number) + 1)==16)){
+			if (type=="VISA" || type=="MASTERCARD" || type=="DISCOVER"){
+				if (expDate.after(new Date())){
+					return true;
+				}
+			}
+		}
+		return false;
 	}
 	
 }
