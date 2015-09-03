@@ -32,5 +32,10 @@ public class OrderDetail {
 	public void setItem(Item item) {
 		this.item = item;
 	}
-	
+	public Double calcSubTotal(){
+		
+	}
+	public int calcWeight(){
+		
+	}
 }

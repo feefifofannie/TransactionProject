@@ -42,4 +42,13 @@ public class Order {
 	public void setOrderdetail(OrderDetail orderdetail) {
 		this.orderdetail = orderdetail;
 	}
+	public Double calcTax(){
+		
+	}
+	public Double calcTotal(){
+		
+	}
+	public Double calcTotalWeight(){
+		
+	}
 }

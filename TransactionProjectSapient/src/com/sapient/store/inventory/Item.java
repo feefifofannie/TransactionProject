@@ -6,7 +6,7 @@ public class Item {
 	private Double shippingWeight;
 	private String description;
 	private OrderDetail orderDetail;
-	
+	private Double itemPrice;
 	public Double getShippingWeight() {
 		return shippingWeight;
 	}
@@ -25,5 +25,12 @@ public class Item {
 	public void setOrderDetail(OrderDetail orderDetail) {
 		this.orderDetail = orderDetail;
 	}
+	public Double getWeight(){
+        	return shippingWeight;	
+	}
+	public Double getPriceforQuantity(){
+		return itemPrice;
+	}
+	
 	
 }
