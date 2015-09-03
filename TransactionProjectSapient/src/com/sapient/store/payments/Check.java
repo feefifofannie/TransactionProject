@@ -1,19 +1,19 @@
 package com.sapient.store.payments;
 
 public class Check implements Authorization{
-	private Object name;
-	private Object bankID;
-	
-	public Object getName() {
+	private String name;
+	private Long bankID;
+
+	public String getName() {
 		return name;
 	}
-	public void setName(Object name) {
+	public void setName(String name) {
 		this.name = name;
 	}
-	public Object getBankID() {
+	public Long getBankID() {
 		return bankID;
 	}
-	public void setBankID(Object bankID) {
+	public void setBankID(Long bankID) {
 		this.bankID = bankID;
 	}
 	

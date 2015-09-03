@@ -1,25 +1,27 @@
 package com.sapient.store.orders;
 
+import java.util.Date;
+
 import com.sapient.store.customers.Customer;
 import com.sapient.store.payments.Payment;
 
 public class Order {
-	private String date;
-	private Object status;
+	private Date date;
+	private String status;
 	private Customer NewCustomer;
 	private Payment payment;
 	private OrderDetail orderdetail;
 	
-	public Object getDate() {
+	public Date getDate() {
 		return date;
 	}
-	public void setDate(String date) {
+	public void setDate(Date date) {
 		this.date = date;
 	}
-	public Object getStatus() {
+	public String getStatus() {
 		return status;
 	}
-	public void setStatus(Object status) {
+	public void setStatus(String status) {
 		this.status = status;
 	}
 	public Customer getNewCustomer() {

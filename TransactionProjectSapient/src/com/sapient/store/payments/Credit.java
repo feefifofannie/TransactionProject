@@ -1,26 +1,30 @@
 package com.sapient.store.payments;
 
+import java.util.Date;
+
 public class Credit implements Authorization {
-	private Object number;
-	private Object type;
-	private Object expDate;
+	private String number;
+	private String type;
+	private Date expDate;
 	
-	public Object getNumber() {
+	
+	
+	public String getNumber() {
 		return number;
 	}
-	public void setNumber(Object number) {
+	public void setNumber(String number) {
 		this.number = number;
 	}
-	public Object getType() {
+	public String getType() {
 		return type;
 	}
-	public void setType(Object type) {
+	public void setType(String type) {
 		this.type = type;
 	}
-	public Object getExpDate() {
+	public Date getExpDate() {
 		return expDate;
 	}
-	public void setExpDate(Object expDate) {
+	public void setExpDate(Date expDate) {
 		this.expDate = expDate;
 	}
 	

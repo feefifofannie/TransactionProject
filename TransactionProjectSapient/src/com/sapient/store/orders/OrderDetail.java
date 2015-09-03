@@ -3,21 +3,21 @@ package com.sapient.store.orders;
 import com.sapient.store.inventory.Item;
 
 public class OrderDetail {
-	private Object quantity;
-	private Object taxStatus;
+	private Integer quantity;
+	private boolean taxStatus;
 	private Order order;
 	private Item item;
 	
-	public Object getQuantity() {
+	public Integer getQuantity() {
 		return quantity;
 	}
-	public void setQuantity(Object quantity) {
+	public void setQuantity(Integer quantity) {
 		this.quantity = quantity;
 	}
-	public Object getTaxStatus() {
+	public boolean getTaxStatus() {
 		return taxStatus;
 	}
-	public void setTaxStatus(Object taxStatus) {
+	public void setTaxStatus(boolean taxStatus) {
 		this.taxStatus = taxStatus;
 	}
 	public Order getOrder() {
