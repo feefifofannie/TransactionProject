@@ -6,6 +6,8 @@ public class Payment {
 	private Object amount;
 	private Order order;
 	
+	
+
 	public Object getAmount() {
 		return amount;
 	}
