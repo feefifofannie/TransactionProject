@@ -4,7 +4,7 @@ import com.sapient.store.customers.Customer;
 import com.sapient.store.payments.Payment;
 
 public class Order {
-	private Object date;
+	private String date;
 	private Object status;
 	private Customer NewCustomer;
 	private Payment payment;
@@ -13,7 +13,7 @@ public class Order {
 	public Object getDate() {
 		return date;
 	}
-	public void setDate(Object date) {
+	public void setDate(String date) {
 		this.date = date;
 	}
 	public Object getStatus() {

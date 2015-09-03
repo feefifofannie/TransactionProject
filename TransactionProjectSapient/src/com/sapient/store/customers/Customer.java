@@ -13,7 +13,7 @@ public class Customer {
 		this.order=order;
 	}
 	
-	public Object getName() {
+	public String getName() {
 		return this.name;
 	}
 	
