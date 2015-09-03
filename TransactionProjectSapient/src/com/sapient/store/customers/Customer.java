@@ -7,6 +7,12 @@ public class Customer {
 	private Object address;
 	private Order order;
 	
+	public Customer(Object name,Object address,Order order){
+		this.name=name;
+		this.address=address;
+		this.order=order;
+	}
+	
 	public Object getName() {
 		return this.name;
 	}
