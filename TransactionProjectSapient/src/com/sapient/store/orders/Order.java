@@ -1,6 +1,8 @@
 package com.sapient.store.orders;
 
 import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
 
 import com.sapient.store.customers.Customer;
 import com.sapient.store.payments.Payment;
@@ -10,7 +12,10 @@ public class Order {
 	private String status;
 	private Customer NewCustomer;
 	private Payment payment;
-	private OrderDetail orderdetail;
+	
+	private List<OrderDetail> orderDetail;
+	
+	private Double totalTax=0.0;
 	
 	public Date getDate() {
 		return date;
@@ -36,19 +41,34 @@ public class Order {
 	public void setPayment(Payment payment) {
 		this.payment = payment;
 	}
-	public OrderDetail getOrderdetail() {
-		return orderdetail;
+	public List<OrderDetail> getOrderdetail() {
+		return orderDetail;
 	}
-	public void setOrderdetail(OrderDetail orderdetail) {
-		this.orderdetail = orderdetail;
+	public void setOrderdetail(List<OrderDetail> orderdetail) {
+		this.orderDetail = orderdetail;
 	}
 	public Double calcTax(){
-		
+		for(OrderDetail od : orderDetail){
+	    	if(od.getTaxStatus())
+	    	{
+			totalTax+=(od.calcSubTotal()*(10/100));
+	    	}
+	    }
+		return totalTax;
 	}
 	public Double calcTotal(){
-		
+		Double total=0.0;
+	    for(OrderDetail od : orderDetail){
+	    	total+=od.calcSubTotal();
+	    }
+	    	return total+totalTax;
+	    	
 	}
 	public Double calcTotalWeight(){
-		
+		Double totalWeight=0.0;
+	    for(OrderDetail od : orderDetail){
+	    	totalWeight+=od.calcWeight();
+	    }
+	    	return totalWeight;
 	}
 }

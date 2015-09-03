@@ -33,9 +33,9 @@ public class OrderDetail {
 		this.item = item;
 	}
 	public Double calcSubTotal(){
-		
+		return quantity*item.getPriceforQuantity();
 	}
-	public int calcWeight(){
-		
+	public Double calcWeight(){
+		return quantity*item.getWeight();
 	}
 }
