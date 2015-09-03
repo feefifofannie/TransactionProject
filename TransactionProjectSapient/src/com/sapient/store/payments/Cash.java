@@ -1,6 +1,6 @@
 package com.sapient.store.payments;
 
-public class Cash implements Authorization {
+public class Cash extends Payment {
 	private Double cashTendered;
 
 	public Double getCashTendered() {
@@ -9,12 +9,6 @@ public class Cash implements Authorization {
 
 	public void setCashTendered(Double cashTendered) {
 		this.cashTendered = cashTendered;
-	}
-
-	@Override
-	public void authorized() {
-		// TODO Auto-generated method stub
-		
 	}
 	
 }
