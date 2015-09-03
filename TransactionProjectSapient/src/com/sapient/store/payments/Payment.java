@@ -13,6 +13,7 @@ public class Payment {
 		this.amount = amount;
 	}
 	public Order getOrder() {
+		//Hello
 		return order;
 	}
 	public void setOrder(Order order) {
