@@ -15,10 +15,11 @@ public class Order {
 	private Payment payment;
     private List<OrderDetail> orderDetail;
 	
-	public Order(Customer customer) {
+	public Order(Customer customer, Payment payment) {
 		this.newCustomer=customer;
 		date = new Date();
 		String status = "Order Recieved";
+		this.payment = payment;
 		orderDetail = new ArrayList<OrderDetail>();
 	}
 	

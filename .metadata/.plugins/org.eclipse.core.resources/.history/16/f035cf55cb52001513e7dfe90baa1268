@@ -16,7 +16,8 @@ public class Customer {
 	public Customer(String name,String address, Payment payment){
 		this.name=name;
 		this.address=address;
-		this.order=new Order(this);
+		this.payment = payment;
+		this.order=new Order(this, payment);
 	}
 	
 	public String getName() {
@@ -47,9 +48,5 @@ public class Customer {
 		//this adds Item to cart
 		OrderDetail newOrderDetail = new OrderDetail(quantity, item);
 		order.getOrderdetail().add(newOrderDetail);
-	}
-	
-	public void makePayment(Payment custPayment){
-		order.setPayment(custPayment);
 	}
 }

@@ -12,7 +12,6 @@ import com.sapient.store.payments.*;
 
 import org.junit.After;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 
 public class OverallTest {
@@ -43,12 +42,6 @@ public class OverallTest {
 		testCustomer.addItemToCart(testItem, 3);
 		Double expectedTotal = 4.5;
 		assertEquals(expectedTotal, testCustomer.getOrder().calcTotalWeight());
-	}
-	
-	@Test
-	public void testPayment() {
-		testCustomer.makePayment(customerCredit);
-		assertEquals(customerCredit, testCustomer.getOrder().getPayment());
 	}
 
 }

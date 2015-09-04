@@ -20,7 +20,7 @@ public class OverallTest {
 	Customer testCustomer;
 	Credit customerCredit;
 	
-	@Before
+	@BeforeClass
 	public void setUp() throws Exception {
 		testItem = new Item(29.99, "Shirt", 1.5, false);
 		customerCredit = new Credit(1111222233334444L, "VISA", "2017-05-14");
