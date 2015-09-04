@@ -1,6 +1,5 @@
 package com.sapient.store.orders;
 
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -20,7 +19,6 @@ public class Order {
 		date = new Date();
 		String status = "Order Recieved";
 		this.payment = payment;
-		orderDetail = new ArrayList<OrderDetail>();
 	}
 	
 	public Date getDate() {

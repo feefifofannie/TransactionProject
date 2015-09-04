@@ -31,17 +31,10 @@ public class OverallTest {
 	}
 
 	@Test
-	public void testCalcTotalPrice() {
+	public void test() {
 		testCustomer.addItemToCart(testItem, 3);
 		Double expectedTotal = 89.97;
-		assertEquals(expectedTotal, testCustomer.getOrder().calcTotalPayment());
-	}
-	
-	@Test
-	public void testCalcTotalWeight() {
-		testCustomer.addItemToCart(testItem, 3);
-		Double expectedTotal = 4.5;
-		assertEquals(expectedTotal, testCustomer.getOrder().calcTotalWeight());
+		assertEquals(expectedTotal, testCustomer.getOrder().calcTotal());
 	}
 
 }
