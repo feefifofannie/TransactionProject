@@ -20,8 +20,13 @@ public class OrderTest {
 	}
 
 	@Test
-	public final void test() {
-		fail("Not yet implemented");
+	public final void testcalcTotalPayment() {
+		
+		//fail("Not yet implemented");
 	}
+	public final void testcalcTotalWeight(){
+		
+	}
+	
 
 }
