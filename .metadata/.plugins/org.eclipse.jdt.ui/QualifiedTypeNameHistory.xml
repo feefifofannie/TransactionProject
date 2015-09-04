@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="com.sapient.store.payments.Payment"/>
+<fullyQualifiedTypeName name="com.sapient.store.customers.Customer"/>
+<fullyQualifiedTypeName name="com.sapient.store.payments.Credit"/>
+<fullyQualifiedTypeName name="java.util.Date"/>
+<fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="com.sapient.store.inventory.Item"/>
+<fullyQualifiedTypeName name="com.sapient.store.orders.OrderDetail"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="org.junit.BeforeClass"/>
+</qualifiedTypeNameHistroy>

@@ -16,6 +16,7 @@ filteredSearchResultIndicationColor=216,216,216
 javaScriptOccurrenceIndicationColor=72,72,72
 lineNumberColor=98,98,98
 occurrenceIndicationColor=72,72,72
+overviewRuler_migration=migrated_3.1
 printMarginColor=98,98,98
 searchResultIndicationColor=216,216,216
 writeOccurrenceIndicationColor=51,90,114

@@ -12,7 +12,7 @@ import com.sapient.store.payments.Credit;
 public class CreditTest {
 
 	Credit credit;
-  
+
 	public CreditTest() {
 	}
 

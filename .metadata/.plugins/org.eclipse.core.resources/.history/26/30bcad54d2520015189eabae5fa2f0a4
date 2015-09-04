@@ -17,7 +17,7 @@ public class CheckTest {
 
 	@Before
 	public void setUp() throws Exception {
-		check = new Check("name", 11L, 111L);
+		check = new Check();
 	}
 
 	@After

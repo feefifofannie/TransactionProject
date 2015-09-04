@@ -2,17 +2,16 @@ package com.sapient.store.test;
 
 import static org.junit.Assert.*;
 import java.text.ParseException;
-
 import org.junit.After;
 import org.junit.Before;
-import org.junit.Test; 
+import org.junit.Test;
 
 import com.sapient.store.payments.Credit;
 
 public class CreditTest {
 
 	Credit credit;
-  
+
 	public CreditTest() {
 	}
 
