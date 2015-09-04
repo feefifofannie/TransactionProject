@@ -21,7 +21,7 @@ OrderDetail orderDetailTest;
 	public void setUp() throws Exception {
      itemTest=new Item(29.99,"Shirt",2.0);
      Integer testQuantity=3;
-     orderDetailTest=new OrderDetail(3,true,itemTest);
+     orderDetailTest=new OrderDetail(testQuantity,true,itemTest);
      
 	}
 
