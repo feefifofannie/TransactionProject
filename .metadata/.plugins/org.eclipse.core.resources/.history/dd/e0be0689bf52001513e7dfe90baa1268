@@ -1,0 +1,42 @@
+package com.sapient.store.test;
+
+import static org.junit.Assert.*;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+import com.sapient.store.inventory.*;
+import com.sapient.store.orders.*;
+import com.sapient.store.customers.*;
+import com.sapient.store.payments.*;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+public class OverallTest {
+	Item testItem;
+	Customer testCustomer;
+	Credit customerCredit;
+	OrderDetail testOrderDetail;
+	
+	@Before
+	public void setUp() throws Exception {
+		testItem = new Item(29.99, "Shirt", 1.5);
+		customerCredit = new Credit(1111222233334444L, "VISA", "2017-05-14");
+		testCustomer = new Customer("Danielle Redmond", "123 Chicago Street", customerCredit);
+		Integer testQuantity = 3;
+		testOrderDetail = new OrderDetail(testQuantity, false, testItem);
+	}
+
+	@After
+	public void tearDown() throws Exception {
+	}
+
+	@Test
+	public void test() {
+		Double expectedTotal = 99.97;
+		assertEquals(99.97, testOrderDetail.calcSubTotal());
+	}
+
+}

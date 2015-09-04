@@ -20,7 +20,7 @@ public class ItemTest {
 	@Test
 	public void testGetPrice() {
 		Double expectedPrice = 24.99;
-		assertEquals(expectedPrice, testItemObject.getPriceForQuantity());
+		assertEquals(expectedPrice, testItemObject.getPriceforQuantity());
 	}
 	
 	@Test
