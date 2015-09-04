@@ -19,9 +19,9 @@ OrderDetail orderDetailTest;
 
 	@Before
 	public void setUp() throws Exception {
-     itemTest=new Item(29.99,"Shirt",2.0, false);
+     itemTest=new Item(29.99,"Shirt",2.0);
      Integer testQuantity=3;
-     orderDetailTest=new OrderDetail(testQuantity, itemTest);
+     orderDetailTest=new OrderDetail(testQuantity,true,itemTest);
      
 	}
 

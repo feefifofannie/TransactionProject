@@ -10,7 +10,7 @@ public class ItemTest {
 	Item testItemObject;
 	@Before
 	public void setUp() throws Exception {
-		testItemObject = new Item(24.99, "Reebok Tennis Shoes", 2.2, false);
+		testItemObject = new Item(24.99, "Reebok Tennis Shoes", 2.2);
 	}
 
 	@After

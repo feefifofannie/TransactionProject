@@ -18,6 +18,7 @@ public class OverallTest {
 	Item testItem;
 	Customer testCustomer;
 	Credit customerCredit;
+	OrderDetail testOrderDetail;
 	
 	@Before
 	public void setUp() throws Exception {
@@ -34,7 +35,7 @@ public class OverallTest {
 	public void test() {
 		testCustomer.addItemToCart(testItem, 3);
 		Double expectedTotal = 89.97;
-		assertEquals(expectedTotal, testCustomer.getOrder().calcTotal());
+		assertEquals(expectedTotal, testOrderDetail.calcSubTotal());
 	}
 
 }

@@ -12,7 +12,7 @@ public class OrderDetail {
 	public OrderDetail(Integer quantity, Item item) {
 		this.item=item;
 		this.quantity=quantity;
-		this.taxStatus=item.isTaxable();
+		this.taxStatus=item.getTaxStatus();
 	}
 	
 	public Integer getQuantity() {

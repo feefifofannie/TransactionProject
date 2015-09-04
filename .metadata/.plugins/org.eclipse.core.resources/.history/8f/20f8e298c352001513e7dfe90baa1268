@@ -45,7 +45,7 @@ public class Customer {
 	}
 	
 	public void addItemToCart(Item item, Integer quantity) {
-		OrderDetail newOrderDetail = new OrderDetail(quantity, item);
+		OrderDetail newOrderDetail = new OrderDetail(quantity, true, item);
 		order.getOrderdetail().add(newOrderDetail);
 	}
 }

@@ -9,10 +9,10 @@ public class OrderDetail {
 	private Item item;
 	private Double totalTax=0.0;
 	
-	public OrderDetail(Integer quantity, Item item) {
+	public OrderDetail(Integer quantity,boolean taxStatus,Item item) {
 		this.item=item;
 		this.quantity=quantity;
-		this.taxStatus=item.isTaxable();
+		this.taxStatus=taxStatus;
 	}
 	
 	public Integer getQuantity() {

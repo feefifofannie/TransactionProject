@@ -18,12 +18,15 @@ public class OverallTest {
 	Item testItem;
 	Customer testCustomer;
 	Credit customerCredit;
+	OrderDetail testOrderDetail;
 	
 	@Before
 	public void setUp() throws Exception {
-		testItem = new Item(29.99, "Shirt", 1.5, false);
+		testItem = new Item(29.99, "Shirt", 1.5);
 		customerCredit = new Credit(1111222233334444L, "VISA", "2017-05-14");
 		testCustomer = new Customer("Danielle Redmond", "123 Chicago Street", customerCredit);
+		Integer testQuantity = 3;
+		testOrderDetail = new OrderDetail(testQuantity, false, testItem);
 	}
 
 	@After
@@ -32,9 +35,8 @@ public class OverallTest {
 
 	@Test
 	public void test() {
-		testCustomer.addItemToCart(testItem, 3);
 		Double expectedTotal = 89.97;
-		assertEquals(expectedTotal, testCustomer.getOrder().calcTotal());
+		assertEquals(expectedTotal, testOrderDetail.calcSubTotal());
 	}
 
 }
