@@ -10,12 +10,18 @@ public class Order {
 	
 	private Date date;
 	private String status;
-	private Customer NewCustomer;
+	private Customer newCustomer;
 	private Payment payment;
     private List<OrderDetail> orderDetail;
-
 	private Double totalTax = 0.0;
-
+	
+	public Order(Customer customer, Payment payment) {
+		this.newCustomer=customer;
+		date = new Date();
+		String status = "Order Recieved";
+		this.payment = payment;
+	}
+	
 	public Date getDate() {
 		return date;
 	}
@@ -33,11 +39,11 @@ public class Order {
 	}
 
 	public Customer getNewCustomer() {
-		return NewCustomer;
+		return newCustomer;
 	}
 
 	public void setNewCustomer(Customer newCustomer) {
-		NewCustomer = newCustomer;
+		newCustomer = newCustomer;
 	}
 
 	public Payment getPayment() {

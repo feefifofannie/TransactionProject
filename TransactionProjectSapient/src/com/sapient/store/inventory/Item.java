@@ -7,6 +7,13 @@ public class Item {
 	private String description;
 	private OrderDetail orderDetail;
 	private Double itemPrice;
+	
+	public Item(Double itemPrice, String description, Double shippingWeight) {
+		this.itemPrice = itemPrice;
+		this.description = description;
+		this.shippingWeight = shippingWeight;
+	}
+	
 	public Double getShippingWeight() {
 		return shippingWeight;
 	}

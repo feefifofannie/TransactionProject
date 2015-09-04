@@ -1,16 +1,19 @@
 package com.sapient.store.customers;
 
 import com.sapient.store.orders.Order;
+import com.sapient.store.payments.Payment;
 
 public class Customer {
 	private String name;
 	private String address;
 	private Order order;
+	private Payment payment;
 	
-	public Customer(String name,String address,Order order){
+	public Customer(String name,String address){
 		this.name=name;
 		this.address=address;
-		this.order=order;
+		payment = new Payment();
+		this.order=new Order(this, payment);
 	}
 	
 	public String getName() {
