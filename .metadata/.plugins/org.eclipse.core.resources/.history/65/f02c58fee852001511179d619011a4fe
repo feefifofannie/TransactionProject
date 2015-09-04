@@ -8,9 +8,7 @@ public class Cash extends Payment {
 	}
 
 	public void setCashTendered(Double cashTendered) {
-		if (cashTendered instanceof Double && cashTendered > 0.0){
-			this.cashTendered = cashTendered;
-		}
+		this.cashTendered = cashTendered;
 	}
 	
 }
