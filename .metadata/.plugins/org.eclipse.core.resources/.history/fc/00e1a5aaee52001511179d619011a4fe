@@ -73,6 +73,8 @@ public class Order {
 		}
 	}
 
+	
+
 	public Double calcTotalPayment() {
 		Double total = 0.0;
 		for (OrderDetail od : orderDetailList) {
