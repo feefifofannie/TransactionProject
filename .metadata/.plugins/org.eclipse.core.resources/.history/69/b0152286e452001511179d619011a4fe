@@ -24,9 +24,7 @@ public class Customer {
 	}
 	
 	public void setName(String name) {
-		if (name != null){
-			this.name = name;
-		}
+		this.name = name;
 	}
 	
 	public Payment getPayment() {
@@ -34,9 +32,7 @@ public class Customer {
 	}
 
 	public void setPayment(Payment payment) {
-		if (payment instanceof Payment && payment !=null){
-			this.payment = payment;
-		}
+		this.payment = payment;
 	}
 
 	public String getAddress() {
@@ -44,9 +40,7 @@ public class Customer {
 	}
 	
 	public void setAddress(String address) {
-		if (address != null){
-			this.address = address;
-		}
+		this.address = address;
 	}
 	
 	public Order getOrder() {
@@ -54,9 +48,7 @@ public class Customer {
 	}
 	
 	public void setOrder(Order order) {
-		if (order instanceof Order && order != null) {
-			this.order = order;
-		}
+		this.order = order;
 	}
 	
 	public void addItemToCart(Item item, Integer quantity) {

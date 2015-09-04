@@ -21,9 +21,7 @@ public class Item {
 	}
 
 	public void setItemPrice(Double itemPrice) {
-		if (itemPrice instanceof Double && itemPrice != null){
-			this.itemPrice = itemPrice;
-		}
+		this.itemPrice = itemPrice;
 	}
 
 	public boolean isTaxable() {
@@ -39,9 +37,7 @@ public class Item {
 	}
 	
 	public void setShippingWeight(Double shippingWeight) {
-		if (shippingWeight instanceof Double && itemPrice != shippingWeight){
-			this.shippingWeight = shippingWeight;
-		}
+		this.shippingWeight = shippingWeight;
 	}
 	
 	public String getDescription() {
@@ -49,9 +45,7 @@ public class Item {
 	}
 	
 	public void setDescription(String description) {
-		if (description instanceof String && description != null){
-			this.description = description;
-		}
+		this.description = description;
 	}
 	
 	public OrderDetail getOrderDetail() {
@@ -59,9 +53,7 @@ public class Item {
 	}
 	
 	public void setOrderDetail(OrderDetail orderDetail) {
-		if (orderDetail instanceof OrderDetail && orderDetail != null){
-			this.orderDetail = orderDetail;
-		}
+		this.orderDetail = orderDetail;
 	}
 	
 	public Double getWeight(){
