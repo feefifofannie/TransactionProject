@@ -16,16 +16,13 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 public class OverallTest {
-	Item noTaxItem, taxItem;
+	Item testItem;
 	Customer testCustomer;
 	Credit customerCredit;
-	Check customerCheck;
-	Cash customerCash;
 	
 	@Before
 	public void setUp() throws Exception {
-		noTaxItem = new Item(29.99, "Shirt", 1.5, false);
-		taxItem = new Item(29.99, "Shirt", 1.5, true);
+		testItem = new Item(29.99, "Shirt", 1.5, false);
 		customerCredit = new Credit(1111222233334444L, "VISA", "2017-05-14");
 		testCustomer = new Customer("Danielle Redmond", "123 Chicago Street", customerCredit);
 	}
@@ -35,15 +32,15 @@ public class OverallTest {
 	}
 
 	@Test
-	public void testCalcNoTaxTotalPrice() {
-		testCustomer.addItemToCart(noTaxItem, 3);
+	public void testCalcTotalPrice() {
+		testCustomer.addItemToCart(testItem, 3);
 		Double expectedTotal = 89.97;
 		assertEquals(expectedTotal, testCustomer.getOrder().calcTotalPayment());
 	}
 	
 	@Test
 	public void testCalcTotalWeight() {
-		testCustomer.addItemToCart(noTaxItem, 3);
+		testCustomer.addItemToCart(testItem, 3);
 		Double expectedTotal = 4.5;
 		assertEquals(expectedTotal, testCustomer.getOrder().calcTotalWeight());
 	}
@@ -52,13 +49,6 @@ public class OverallTest {
 	public void testPayment() {
 		testCustomer.makePayment(customerCredit);
 		assertEquals(customerCredit, testCustomer.getOrder().getPayment());
-	}
-	
-	@Test
-	public void testCalcTaxTotalPrice() {
-		testCustomer.addItemToCart(taxItem, 3);
-		Double expectedTotal = 98.97;
-		assertEquals(expectedTotal, testCustomer.getOrder().calcTotalPayment());
 	}
 
 }

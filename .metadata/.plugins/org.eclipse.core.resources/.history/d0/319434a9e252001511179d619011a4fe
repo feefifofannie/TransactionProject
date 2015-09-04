@@ -27,14 +27,6 @@ public class Customer {
 		this.name = name;
 	}
 	
-	public Payment getPayment() {
-		return payment;
-	}
-
-	public void setPayment(Payment payment) {
-		this.payment = payment;
-	}
-
 	public String getAddress() {
 		return this.address;
 	}

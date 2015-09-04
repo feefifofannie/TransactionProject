@@ -19,8 +19,6 @@ public class OverallTest {
 	Item noTaxItem, taxItem;
 	Customer testCustomer;
 	Credit customerCredit;
-	Check customerCheck;
-	Cash customerCash;
 	
 	@Before
 	public void setUp() throws Exception {

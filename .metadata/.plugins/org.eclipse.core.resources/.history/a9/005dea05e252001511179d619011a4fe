@@ -37,7 +37,7 @@ OrderDetail orderDetailTest;
 		
 		//fail("Not yet implemented");
 	}
-	public final void testcalcWeight(){
+	public final void testcalWeight(){
 		Double expectedcalWeight=6.0;
 		Double actualcalWeight=orderDetailTest.calcWeight();
 		assertEquals(expectedcalWeight, actualcalWeight);	

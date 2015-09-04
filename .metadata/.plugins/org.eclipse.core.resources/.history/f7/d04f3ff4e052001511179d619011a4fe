@@ -42,14 +42,14 @@ public class OrderDetail {
 	
 	public Double calcTax() {
 		Double taxPercent = 0.1;
-		if (taxStatus==true) {
-			totalTax = (double) Math.round(item.getPriceForQuantity()*quantity*taxPercent);
+		if (taxStatus) {
+			totalTax = item.getPriceForQuantity()*quantity*taxPercent;
 		}
 		return totalTax;
 	}
 	public Double calcSubTotal(){
 		Double netPrice = quantity*item.getPriceForQuantity();
-		return netPrice+calcTax();
+		return netPrice+totalTax;
 	}
 	public Double calcWeight(){
 		return quantity*item.getWeight();
