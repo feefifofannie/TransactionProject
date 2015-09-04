@@ -4,6 +4,12 @@ public class Check extends Payment implements Authorization{
 	private String name;
 	private Long accountNumber;
 	private Long routingNumber;
+	
+	public Check(String name,Long accountNumber,Long routingNumber){
+		this.name=name;
+		this.accountNumber=accountNumber;
+		this.routingNumber=routingNumber;
+	}
 
 	public String getName() {
 		return name;
