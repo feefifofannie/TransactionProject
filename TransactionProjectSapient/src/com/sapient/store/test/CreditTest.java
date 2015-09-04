@@ -2,9 +2,14 @@ package com.sapient.store.test;
 
 import static org.junit.Assert.*;
 
-import java.sql.Date;
 import java.text.DateFormat;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Date;
+
+
+
+
 
 import org.junit.After;
 import org.junit.Before;
@@ -15,12 +20,13 @@ import com.sapient.store.payments.Credit;
 public class CreditTest {
 
 	
-	Credit credit=new Credit();
+	Credit credit;
 	public CreditTest() {
 	}
 
 	@Before
 	public void setUp() throws Exception {
+		credit=new Credit();
 	}
 
 	@After
@@ -29,19 +35,51 @@ public class CreditTest {
 	}
 
 	@Test
-	public final void testAuthorised() {
-		boolean expectedResult=true;
-		Date d=new Date(15/06/2022);
-		credit.setNumber(1234567891011111L);
-		credit.setType("VISA");
-		credit.setExpDate(d);
+	public final void testAuthorisedForCorrectCreditCardDetails() throws ParseException {
 	
-		 boolean actualResult=credit.authorized();
+		credit.setNumber(1234567891011111L);
+	    credit.setType("VISA");
+	    credit.setExpDate("2022-07-15");
+		boolean expectedResult=true;
+        boolean actualResult=credit.authorized();
 		assertEquals(expectedResult, actualResult);
-		
-		
+	
 	}
 	
+	@Test
+	public final void testAuthorisedForNegativeNumber() throws  ParseException {
 	
+	credit.setNumber(-1234567894634681L);
+	credit.setType("VISA");
+    credit.setExpDate("2022-07-15");
+	boolean expectedResult=false;
+    boolean actualResult=credit.authorized();
+	assertEquals(expectedResult, actualResult);
 
+    }
+	
+	
+	@Test
+	public final void testAuthorisedForExpiredCreditCard() throws ParseException {
+	
+	credit.setNumber(1234567894634681L);
+	credit.setType("VISA");
+    credit.setExpDate("2015-09-03");
+	boolean expectedResult=false;
+    boolean actualResult=credit.authorized();
+	assertEquals(expectedResult, actualResult);
+
+}
+	
+	@Test
+	public final void testAuthorisedForWrongNoOfDigitsInNumber() throws ParseException {
+	
+	credit.setNumber(1234567894634L);
+	credit.setType("VISA");
+    credit.setExpDate("2015-09-03");
+	boolean expectedResult=false;
+    boolean actualResult=credit.authorized();
+	assertEquals(expectedResult, actualResult);
+
+}
 }
