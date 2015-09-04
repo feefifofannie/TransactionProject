@@ -7,7 +7,14 @@ public class Credit extends Payment implements Authorization {
 	private String type;
 	private Date expDate;
 	
-	
+	public Credit() {
+		
+	}
+	public Credit(Long number,String type,Date expDate){
+		this.number=number;
+		this.type=type;
+		this.expDate=expDate;
+	}
 	
 	public Long getNumber() {
 		return number;
