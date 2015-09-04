@@ -9,7 +9,6 @@ public class OrderDetail {
 	private Item item;
 	public OrderDetail(Integer quantity,boolean taxStatus,Item item){
 		this.item=item;
-		//this.order=order;
 		this.quantity=quantity;
 		this.taxStatus=taxStatus;
 	}
