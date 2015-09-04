@@ -33,8 +33,8 @@ public class Check extends Payment implements Authorization{
 	@Override
 	public boolean authorized() {
 		// Only accept positive bank IDs that are 10 digits
-		if ((accountNumber>0) || (Math.floor(Math.log10(accountNumber) + 1)==15)){
-			if ((routingNumber>0) || (Math.floor(Math.log10(routingNumber) + 1)==9)){
+		if ((accountNumber>0) && (Math.floor(Math.log10(accountNumber) + 1)==15)){
+			if ((routingNumber>0) && (Math.floor(Math.log10(routingNumber) + 1)==9)){
 				return true;
 			}
 		}

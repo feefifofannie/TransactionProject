@@ -45,7 +45,7 @@ public class Credit extends Payment implements Authorization {
 	public boolean authorized() {
 		// TODO Auto-generated method stub
 		if ((number>0) && (Math.floor(Math.log10(number) + 1)==16)){
-			if (type=="VISA" || type=="MASTERCARD" || type=="DISCOVER"){
+			if (type=="VISA" || type=="MASTERCARD" || type=="DISCOVER" || type=="AMERICAN EXPRESS"){
 				if (expDate.after(new Date())){
 					return true;
 				}

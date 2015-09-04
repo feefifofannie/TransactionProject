@@ -62,7 +62,9 @@ public class Customer {
 	public void addItemToCart(Item item, Integer quantity) {
 		//this adds Item to cart
 		OrderDetail newOrderDetail = new OrderDetail(quantity, item);
-		order.getOrderDetail().add(newOrderDetail);
+		List<OrderDetail> temp = order.getOrderDetail();
+		temp.add(newOrderDetail);
+		order.setOrderDetail(temp);
 	}
 	
 	public void makePayment(Payment custPayment){

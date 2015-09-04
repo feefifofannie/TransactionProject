@@ -10,4 +10,6 @@
 <fullyQualifiedTypeName name="com.sapient.store.orders.OrderDetail"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="org.junit.BeforeClass"/>
+<fullyQualifiedTypeName name="com.sapient.store.payments.Cash"/>
+<fullyQualifiedTypeName name="com.sapient.store.payments.Check"/>
 </qualifiedTypeNameHistroy>

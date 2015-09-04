@@ -1,12 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="OverallTest" project="TransactionProjectSapient" tests="4" started="4" failures="1" errors="0" ignored="0">
-  <testsuite name="com.sapient.store.test.OverallTest" time="0.031">
-    <testcase name="testCalcTaxTotalPrice" classname="com.sapient.store.test.OverallTest" time="0.031">
-      <failure>java.lang.AssertionError: expected:&lt;98.97&gt; but was:&lt;89.97&gt;&#13;
+<?xml version="1.0" encoding="UTF-8"?><testrun name="OverallTest" project="TransactionProjectSapient" tests="5" started="5" failures="1" errors="0" ignored="0">
+  <testsuite name="com.sapient.store.test.OverallTest" time="0.015">
+    <testcase name="testCalcTaxTotalPrice" classname="com.sapient.store.test.OverallTest" time="0.015"/>
+    <testcase name="testPayment" classname="com.sapient.store.test.OverallTest" time="0.0"/>
+    <testcase name="testCalcTotalWeight" classname="com.sapient.store.test.OverallTest" time="0.0"/>
+    <testcase name="testCalcMultipleItemsTotalPrice" classname="com.sapient.store.test.OverallTest" time="0.0">
+      <failure>java.lang.AssertionError: expected:&lt;137.47&gt; but was:&lt;137.97&gt;&#13;
 	at org.junit.Assert.fail(Assert.java:88)&#13;
 	at org.junit.Assert.failNotEquals(Assert.java:743)&#13;
 	at org.junit.Assert.assertEquals(Assert.java:118)&#13;
 	at org.junit.Assert.assertEquals(Assert.java:144)&#13;
-	at com.sapient.store.test.OverallTest.testCalcTaxTotalPrice(OverallTest.java:59)&#13;
+	at com.sapient.store.test.OverallTest.testCalcMultipleItemsTotalPrice(OverallTest.java:74)&#13;
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)&#13;
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)&#13;
@@ -35,8 +38,6 @@
 &#13;
 </failure>
     </testcase>
-    <testcase name="testPayment" classname="com.sapient.store.test.OverallTest" time="0.0"/>
-    <testcase name="testCalcTotalWeight" classname="com.sapient.store.test.OverallTest" time="0.0"/>
     <testcase name="testCalcNoTaxTotalPrice" classname="com.sapient.store.test.OverallTest" time="0.0"/>
   </testsuite>
 </testrun>

@@ -10,6 +10,7 @@ public class OrderDetail {
 	private Double totalTax=0.0;
 	
 	public OrderDetail(Integer quantity, Item item) {
+		totalTax = 0.0;
 		this.item=item;
 		this.quantity=quantity;
 		this.taxStatus=item.isTaxable();
@@ -48,9 +49,12 @@ public class OrderDetail {
 	
 	public Double calcTax() {
 		Double taxPercent = 0.1;
-		if (taxStatus==true) {
-			totalTax = (double) Math.round(item.getPriceForQuantity()*quantity*taxPercent);
+		if (taxStatus) {
+			totalTax = item.getPriceForQuantity()*quantity*taxPercent;
+			double roundedTax = (double)Math.round(totalTax * 100) / 100;
+			totalTax = roundedTax;
 		}
+		
 		return totalTax;
 	}
 	public Double calcSubTotal(){

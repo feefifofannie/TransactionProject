@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="CheckTest" project="TransactionProjectSapient" tests="3" started="3" failures="0" errors="0" ignored="0">
+  <testsuite name="com.sapient.store.test.CheckTest" time="0.0">
+    <testcase name="testForInvalidRoutingNumber" classname="com.sapient.store.test.CheckTest" time="0.0"/>
+    <testcase name="testForInvalidAccountNumber" classname="com.sapient.store.test.CheckTest" time="0.0"/>
+    <testcase name="testForValidCheque" classname="com.sapient.store.test.CheckTest" time="0.0"/>
+  </testsuite>
+</testrun>
