@@ -43,7 +43,7 @@ public class OrderDetail {
 	public Double calcTax() {
 		Double taxPercent = 0.1;
 		if (taxStatus) {
-			totalTax = item.getPriceForQuantity()*quantity*taxPercent;
+			totalTax = (double) Math.round(item.getPriceForQuantity()*quantity*taxPercent);
 		}
 		return totalTax;
 	}
