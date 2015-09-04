@@ -13,7 +13,6 @@ public class Order {
 	private Customer newCustomer;
 	private Payment payment;
     private List<OrderDetail> orderDetail;
-	private Double totalTax = 0.0;
 	
 	public Order(Customer customer, Payment payment) {
 		this.newCustomer=customer;
@@ -62,23 +61,14 @@ public class Order {
 		this.orderDetail = orderdetail;
 	}
 
-	public Double calcTax() {
-		for (OrderDetail od : orderDetail) {
-
-			Double taxPercent = 10.0;
-			if (od.getTaxStatus()) {
-				totalTax += (od.calcSubTotal() * (taxPercent / 100));
-			}
-		}
-		return totalTax;
-	}
+	
 
 	public Double calcTotal() {
 		Double total = 0.0;
 		for (OrderDetail od : orderDetail) {
 			total += od.calcSubTotal();
 		}
-		return total + totalTax;
+		return total;
 
 	}
 

@@ -35,7 +35,7 @@ public class Item {
 	public Double getWeight(){
         	return shippingWeight;	
 	}
-	public Double getPriceforQuantity(){
+	public Double getPriceForQuantity(){
 		return itemPrice;
 	}
 	

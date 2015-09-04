@@ -9,10 +9,10 @@ public class Customer {
 	private Order order;
 	private Payment payment;
 	
-	public Customer(String name,String address){
+	public Customer(String name,String address, Payment payment){
 		this.name=name;
 		this.address=address;
-		payment = new Payment();
+		this.payment = payment;
 		this.order=new Order(this, payment);
 	}
 	

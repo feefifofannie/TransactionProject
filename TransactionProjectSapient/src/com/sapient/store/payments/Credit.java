@@ -1,5 +1,7 @@
 package com.sapient.store.payments;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Credit extends Payment implements Authorization {
@@ -10,10 +12,12 @@ public class Credit extends Payment implements Authorization {
 	public Credit() {
 		
 	}
-	public Credit(Long number,String type,Date expDate){
+	public Credit(Long number,String type, String expDate) throws ParseException{
 		this.number=number;
 		this.type=type;
-		this.expDate=expDate;
+		SimpleDateFormat fmt = new SimpleDateFormat("yyyy-MM-dd");
+		Date formattedDate = fmt.parse(expDate);
+		this.expDate=formattedDate;
 	}
 	
 	public Long getNumber() {

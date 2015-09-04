@@ -7,7 +7,9 @@ public class OrderDetail {
 	private boolean taxStatus;
 	private Order order;
 	private Item item;
-	public OrderDetail(Integer quantity,boolean taxStatus,Item item){
+	private Double totalTax=0.0;
+	
+	public OrderDetail(Integer quantity,boolean taxStatus,Item item) {
 		this.item=item;
 		this.quantity=quantity;
 		this.taxStatus=taxStatus;
@@ -37,8 +39,17 @@ public class OrderDetail {
 	public void setItem(Item item) {
 		this.item = item;
 	}
+	
+	public Double calcTax() {
+		Double taxPercent = 0.1;
+		if (taxStatus) {
+			totalTax = item.getPriceForQuantity()*quantity*taxPercent;
+		}
+		return totalTax;
+	}
 	public Double calcSubTotal(){
-		return quantity*item.getPriceforQuantity();
+		Double netPrice = quantity*item.getPriceForQuantity();
+		return netPrice+totalTax;
 	}
 	public Double calcWeight(){
 		return quantity*item.getWeight();
