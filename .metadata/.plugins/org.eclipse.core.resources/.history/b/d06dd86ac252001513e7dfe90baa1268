@@ -1,10 +1,6 @@
 package com.sapient.store.customers;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import com.sapient.store.inventory.Item;
-import com.sapient.store.orders.*;
+import com.sapient.store.orders.Order;
 import com.sapient.store.payments.Payment;
 
 public class Customer {
@@ -42,10 +38,5 @@ public class Customer {
 	
 	public void setOrder(Order order) {
 		this.order = order;
-	}
-	
-	public void addItemToCart(Item item, Integer quantity) {
-		OrderDetail newOrderDetail = new OrderDetail(quantity, true, item);
-		order.getOrderdetail().add(newOrderDetail);
 	}
 }
