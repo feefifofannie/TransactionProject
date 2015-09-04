@@ -42,5 +42,10 @@ OrderDetail orderDetailTest;
 		Double actualcalWeight=orderDetailTest.calcWeight();
 		assertEquals(expectedcalWeight, actualcalWeight);	
 	}
+	public final void testcalcTax(){
+		Double expectedcalcTax=8.997;
+		Double actualcalcTax=orderDetailTest.calcTax();
+		assertEquals(expectedcalcTax, actualcalcTax);	
+	}
 
 }
