@@ -13,14 +13,14 @@ public class Order {
 	private String status;
 	private Customer newCustomer;
 	private Payment payment;
-    private List<OrderDetail> orderDetail;
+    private List<OrderDetail> orderDetailList;
 	
 	public Order(Customer customer) {
 		this.newCustomer=customer;
 		payment = customer.getPayment();
 		date = new Date();
 		String status = "Order Recieved";
-		orderDetail = new ArrayList<OrderDetail>();
+		orderDetailList = new ArrayList<OrderDetail>();
 	}
 	
 	public Date getDate() {
@@ -28,7 +28,9 @@ public class Order {
 	}
 
 	public void setDate(Date date) {
-		this.date = date;
+		if (date instanceof Date && date != null){
+			this.date = date;
+		}
 	}
 
 	public String getStatus() {
@@ -36,7 +38,9 @@ public class Order {
 	}
 
 	public void setStatus(String status) {
-		this.status = status;
+		if (status != null){
+			this.status = status;
+		}
 	}
 
 	public Customer getNewCustomer() {
@@ -44,7 +48,9 @@ public class Order {
 	}
 
 	public void setNewCustomer(Customer newCustomer) {
-		newCustomer = newCustomer;
+		if (newCustomer instanceof Customer && newCustomer != null){
+			this.newCustomer = newCustomer;
+		}
 	}
 
 	public Payment getPayment() {
@@ -52,22 +58,26 @@ public class Order {
 	}
 
 	public void setPayment(Payment payment) {
-		this.payment = payment;
+		if (payment instanceof Payment && payment != null){
+			this.payment = payment;
+		}
 	}
 
-	public List<OrderDetail> getOrderdetail() {
-		return orderDetail;
+	public List<OrderDetail> getOrderDetail() {
+		return orderDetailList;
 	}
 
-	public void setOrderdetail(List<OrderDetail> orderdetail) {
-		this.orderDetail = orderdetail;
+	public void setOrderDetail(List<OrderDetail> orderDetail) {
+		if (orderDetail instanceof List<?> && orderDetail != null) {
+			this.orderDetailList = orderDetail;
+		}
 	}
 
 	
 
 	public Double calcTotalPayment() {
 		Double total = 0.0;
-		for (OrderDetail od : orderDetail) {
+		for (OrderDetail od : orderDetailList) {
 			total += od.calcSubTotal();
 		}
 		return total;
@@ -76,7 +86,7 @@ public class Order {
 
 	public Double calcTotalWeight() {
 		Double totalWeight = 0.0;
-		for (OrderDetail od : orderDetail) {
+		for (OrderDetail od : orderDetailList) {
 			totalWeight += od.calcWeight();
 		}
 		return totalWeight;

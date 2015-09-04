@@ -19,7 +19,9 @@ public class OrderDetail {
 		return quantity;
 	}
 	public void setQuantity(Integer quantity) {
-		this.quantity = quantity;
+		if (quantity>0) {
+			this.quantity = quantity;
+		}
 	}
 	public boolean getTaxStatus() {
 		return taxStatus;
@@ -31,13 +33,17 @@ public class OrderDetail {
 		return order;
 	}
 	public void setOrder(Order order) {
-		this.order = order;
+		if (order instanceof Order && order != null) {
+			this.order = order;
+		}
 	}
 	public Item getItem() {
 		return item;
 	}
 	public void setItem(Item item) {
-		this.item = item;
+		if (item instanceof Item && item != null) {
+			this.item = item;
+		}
 	}
 	
 	public Double calcTax() {
