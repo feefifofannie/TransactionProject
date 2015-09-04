@@ -7,6 +7,12 @@ public class OrderDetail {
 	private boolean taxStatus;
 	private Order order;
 	private Item item;
+	public OrderDetail(Integer quantity,boolean taxStatus,Item item){
+		this.item=item;
+		//this.order=order;
+		this.quantity=quantity;
+		this.taxStatus=taxStatus;
+	}
 	
 	public Integer getQuantity() {
 		return quantity;
