@@ -36,17 +36,6 @@ public class CreditTest {
 		credit.setType("VISA");
 		credit.setExpDate(d);
 	
-		
-
-		
-		DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
-		Date date = new Date(0);
-		System.out.println(dateFormat.format(date)); //2014/08/06 15:59:48
-	     // Date dNow = Date.;
-	     // SimpleDateFormat ft =  new SimpleDateFormat ("dd.MM.yyyy");
-
-	  //    System.out.println("Current Date: " + ft.format(dNow));
-	//	System.out.println(new Date());
 		 boolean actualResult=credit.authorized();
 		assertEquals(expectedResult, actualResult);
 		
