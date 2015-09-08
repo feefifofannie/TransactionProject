@@ -2,17 +2,13 @@ package com.sapient.store.test;
 
 import static org.junit.Assert.*;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 import com.sapient.store.inventory.*;
-import com.sapient.store.orders.*;
 import com.sapient.store.customers.*;
 import com.sapient.store.payments.*;
 
 import org.junit.After;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 
 public class OverallTest {

@@ -1,8 +1,6 @@
 package com.sapient.store.customers;
 
-import java.util.ArrayList;
 import java.util.List;
-
 import com.sapient.store.inventory.Item;
 import com.sapient.store.orders.*;
 import com.sapient.store.payments.Payment;

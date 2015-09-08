@@ -19,7 +19,7 @@ public class Order {
 		this.newCustomer=customer;
 		payment = customer.getPayment();
 		date = new Date();
-		String status = "Order Recieved";
+		//String status = "Order Recieved";
 		orderDetailList = new ArrayList<OrderDetail>();
 	}
 	
